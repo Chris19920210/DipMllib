@@ -37,7 +37,7 @@ public class BatchProcessMultipleThread {
         Thread reader = new Thread(new ReadWorkerThread(in, read, batch));
         reader.start();
 
-        Thread writer = new Thread(new WriteWorkerThread(outZh,outEn,read,batch));
+        Thread writer = new Thread(new WriteWorkerThread(outZh,outEn,write));
         writer.start();
 
         ExecutorService workers = Executors.newFixedThreadPool(numThreads);
@@ -47,7 +47,7 @@ public class BatchProcessMultipleThread {
         workers.shutdown();
     }
 
-    public static void main (String[] args) throws Exception{
+    public static void main (String[] args){
         String inputPath = args[0];
         String outputPath = args[1];
         int batch = Integer.parseInt(args[2]);

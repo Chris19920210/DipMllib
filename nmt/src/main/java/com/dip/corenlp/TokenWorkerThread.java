@@ -63,6 +63,8 @@ public class TokenWorkerThread implements Runnable {
     public void run() {
         String enSentences;
         String zhSentences;
+        List<String> results = new ArrayList<>();
+        List<String> result = new ArrayList<>();
         while(true) {
             try{
                 if(this.read.getLastElement() && this.read.isEmpty()){
@@ -79,10 +81,8 @@ public class TokenWorkerThread implements Runnable {
                 zhSentences = SentencesPair.zhSentences;
 
                 Annotation zhDocuments = new Annotation(zhSentences);
-                List<String> results = new ArrayList<>();
                 this.zhPipeline.annotate(zhDocuments);
                 List<CoreMap> sentenceTmp = zhDocuments.get(CoreAnnotations.SentencesAnnotation.class);
-                List<String> result = new ArrayList<>();
                 for (CoreMap sentence: sentenceTmp) {
                     for (CoreLabel token: sentence.get(CoreAnnotations.TokensAnnotation.class)){
                         result.add(token.word());

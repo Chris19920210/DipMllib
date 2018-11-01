@@ -20,12 +20,13 @@ public class ReadWorkerThread implements Runnable {
     public void run(){
         String str;
         int counter = 0;
+        String[] tmp;
         List<String> en = new ArrayList<>();
         List<String> zh = new ArrayList<>();
         try{
             while((str = in.readLine()) != null) {
                 counter += 1;
-                String[] tmp = str.split("\t");
+                tmp = str.split("\t");
                 en.add(tmp[0]);
                 zh.add(tmp[1]);
                 if (counter % batch == 0) {

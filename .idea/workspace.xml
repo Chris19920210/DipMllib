@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78441303-179f-4cb7-989b-f0f0b967d7d7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/BatchProcess.java" afterPath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/BatchProcess.java" />
       <change beforePath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/BatchProcessMultipleThread.java" afterPath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/BatchProcessMultipleThread.java" />
+      <change beforePath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/ReadWorkerThread.java" afterPath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/ReadWorkerThread.java" />
       <change beforePath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/TokenWorkerThread.java" afterPath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/TokenWorkerThread.java" />
       <change beforePath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/WriteWorkerThread.java" afterPath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/WriteWorkerThread.java" />
     </list>
@@ -29,8 +28,8 @@
       <file leaf-file-name="TokenWorkerThread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/TokenWorkerThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-683">
-              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="777">
+              <caret line="105" column="75" lean-forward="false" selection-start-line="105" selection-start-column="64" selection-end-line="105" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,14 +50,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WriteWorkerThread.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WriteWorkerThread.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/WriteWorkerThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="67" column="30" lean-forward="true" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="1336">
+              <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BatchProcessMultipleThread.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BatchProcessMultipleThread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/BatchProcessMultipleThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+            <state relative-caret-position="633">
+              <caret line="44" column="63" lean-forward="true" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,8 +122,8 @@
       <file leaf-file-name="ReadWorkerThread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/ReadWorkerThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1480">
-              <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+            <state relative-caret-position="851">
+              <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -177,10 +174,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/MyBlockingQueue.java" />
         <option value="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/BatchProcess.java" />
-        <option value="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/ReadWorkerThread.java" />
         <option value="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/WriteWorkerThread.java" />
-        <option value="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/TokenWorkerThread.java" />
         <option value="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/BatchProcessMultipleThread.java" />
+        <option value="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/ReadWorkerThread.java" />
+        <option value="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/TokenWorkerThread.java" />
       </list>
     </option>
   </component>
@@ -267,6 +264,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="corenlp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DipMllib" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DipMllib" type="462c0819:PsiDirectoryNode" />
+              <item name="nmt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -425,7 +430,7 @@
       <workItem from="1540968783480" duration="25399000" />
       <workItem from="1541031531665" duration="15642000" />
       <workItem from="1541054385639" duration="282000" />
-      <workItem from="1541054768328" duration="5888000" />
+      <workItem from="1541054768328" duration="7148000" />
     </task>
     <task id="LOCAL-00001" summary="multiple thread modification">
       <created>1541057525455</created>
@@ -438,7 +443,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53192000" />
+    <option name="totallyTimeSpent" value="54452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="3840" height="2134" extended-state="6" />
@@ -453,8 +458,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3345666" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3345666" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23541667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -624,9 +629,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -829,39 +832,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/WriteWorkerThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="67" column="30" lean-forward="true" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/SentencePairs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
           <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/ReadWorkerThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1480">
-          <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/TokenWorkerThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-683">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -877,11 +852,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/BatchProcessMultipleThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        <state relative-caret-position="633">
+          <caret line="44" column="63" lean-forward="true" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/ReadWorkerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/TokenWorkerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="105" column="75" lean-forward="false" selection-start-line="105" selection-start-column="64" selection-end-line="105" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/WriteWorkerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1336">
+          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
