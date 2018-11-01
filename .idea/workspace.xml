@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78441303-179f-4cb7-989b-f0f0b967d7d7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/BatchProcessMultipleThread.java" afterPath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/BatchProcessMultipleThread.java" />
-      <change beforePath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/MyBlockingQueue.java" afterPath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/MyBlockingQueue.java" />
-      <change beforePath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/ReadWorkerThread.java" afterPath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/ReadWorkerThread.java" />
-      <change beforePath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/TokenWorkerThread.java" afterPath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/TokenWorkerThread.java" />
       <change beforePath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/WriteWorkerThread.java" afterPath="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/WriteWorkerThread.java" />
-      <change beforePath="$PROJECT_DIR$/nmt/target/classes/com/dip/corenlp/BatchProcess.class" afterPath="$PROJECT_DIR$/nmt/target/classes/com/dip/corenlp/BatchProcess.class" />
-      <change beforePath="$PROJECT_DIR$/nmt/target/classes/com/dip/corenlp/MyBlockingQueue.class" afterPath="$PROJECT_DIR$/nmt/target/classes/com/dip/corenlp/MyBlockingQueue.class" />
-      <change beforePath="$PROJECT_DIR$/nmt/target/classes/com/dip/corenlp/ReadWorkerThread.class" afterPath="$PROJECT_DIR$/nmt/target/classes/com/dip/corenlp/ReadWorkerThread.class" />
-      <change beforePath="$PROJECT_DIR$/nmt/target/classes/com/dip/corenlp/TokenWorkerThread.class" afterPath="$PROJECT_DIR$/nmt/target/classes/com/dip/corenlp/TokenWorkerThread.class" />
-      <change beforePath="$PROJECT_DIR$/nmt/target/classes/com/dip/corenlp/WriteWorkerThread.class" afterPath="$PROJECT_DIR$/nmt/target/classes/com/dip/corenlp/WriteWorkerThread.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -70,8 +60,8 @@
       <file leaf-file-name="WriteWorkerThread.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/WriteWorkerThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="777">
-              <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+            <state relative-caret-position="888">
+              <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -461,7 +451,7 @@
       <workItem from="1540968783480" duration="25399000" />
       <workItem from="1541031531665" duration="15642000" />
       <workItem from="1541054385639" duration="282000" />
-      <workItem from="1541054768328" duration="12922000" />
+      <workItem from="1541054768328" duration="13660000" />
     </task>
     <task id="LOCAL-00001" summary="multiple thread modification">
       <created>1541057525455</created>
@@ -474,7 +464,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60226000" />
+    <option name="totallyTimeSpent" value="60964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="3840" height="2134" extended-state="6" />
@@ -913,8 +903,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/WriteWorkerThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        <state relative-caret-position="888">
+          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
           <folding />
         </state>
       </provider>

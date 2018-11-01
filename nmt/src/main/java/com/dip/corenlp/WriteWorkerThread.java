@@ -25,10 +25,10 @@ public class WriteWorkerThread implements Runnable {
         int counter = 0;
         while(true){
             try{
-                if(this.read.get() == numThreads && this.read.isEmpty()){
+                if(read.get() == numThreads && read.isEmpty()){
                     break;
                 }
-                if(this.read.get() >= 0 && this.read.get() < numThreads && read.isEmpty()){
+                if(read.get() < numThreads && read.isEmpty()){
                     Thread.sleep(1000);
                     continue;
                 }
