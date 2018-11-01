@@ -5,18 +5,16 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class MyBlockingQueue<E> extends LinkedBlockingDeque<E> {
-    private AtomicInteger count;
+    private AtomicInteger count = new AtomicInteger(0);
 
 
     public MyBlockingQueue()
     {
         super();
-        count = new AtomicInteger(0);
     }
     public MyBlockingQueue(int capacity)
     {
         super(capacity);
-        count = new AtomicInteger(0);
     }
 
     public void increment(){

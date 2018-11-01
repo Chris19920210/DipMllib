@@ -37,7 +37,7 @@ public class BatchProcessMultipleThread {
         Thread reader = new Thread(new ReadWorkerThread(in, read, batch));
         reader.start();
 
-        Thread writer = new Thread(new WriteWorkerThread(outZh,outEn,write));
+        Thread writer = new Thread(new WriteWorkerThread(outZh,outEn,write, numThreads));
         writer.start();
 
         ExecutorService workers = Executors.newFixedThreadPool(numThreads);

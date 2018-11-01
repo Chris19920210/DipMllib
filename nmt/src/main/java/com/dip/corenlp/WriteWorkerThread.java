@@ -25,22 +25,23 @@ public class WriteWorkerThread implements Runnable {
         int counter = 0;
         while(true){
             try{
-                if(read.get() == numThreads && read.isEmpty()){
+                if(this.read.get() == numThreads && this.read.isEmpty()){
                     break;
                 }
-                if(read.get() < numThreads && read.isEmpty()){
+                if(this.read.get() < numThreads && this.read.isEmpty() ){
                     Thread.sleep(1000);
                     continue;
                 }
+
                 counter += 1;
-                SentencePairs<String,String> pair = read.take();
+                SentencePairs<String,String> pair = this.read.take();
 
                 enSentences = pair.enSentences;
                 zhSentences = pair.zhSentences;
-                outEn.write(enSentences.getBytes("UTF-8"));
-                outEn.write("\n".getBytes("UTF-8"));
-                outZh.write(zhSentences.getBytes("UTF-8"));
-                outZh.write("\n".getBytes("UTF-8"));
+                this.outEn.write(enSentences.getBytes("UTF-8"));
+                this.outEn.write("\n".getBytes("UTF-8"));
+                this.outZh.write(zhSentences.getBytes("UTF-8"));
+                this.outZh.write("\n".getBytes("UTF-8"));
                 System.out.println("Batch=" + counter);
             } catch (Exception e){
                 e.printStackTrace();
@@ -48,8 +49,8 @@ public class WriteWorkerThread implements Runnable {
         }
         try {
             System.out.println("Done");
-            outEn.flush();
-            outZh.flush();
+            this.outEn.flush();
+            this.outZh.flush();
         } catch(Exception e){
             e.printStackTrace();
         }
