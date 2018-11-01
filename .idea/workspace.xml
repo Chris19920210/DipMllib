@@ -1,0 +1,1137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="78441303-179f-4cb7-989b-f0f0b967d7d7" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/nmt/target/" />
+    <ignored path="$PROJECT_DIR$/nmt/preprocess/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/dipml$BatchProcess.coverage" NAME="BatchProcess Coverage Results" MODIFIED="1541049427733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.dip.corenlp.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+      <file leaf-file-name="TokenWorkerThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/TokenWorkerThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2516">
+              <caret line="78" column="30" lean-forward="false" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WriteWorkerThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/WriteWorkerThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1998">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyBlockingQueue.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/MyBlockingQueue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="518">
+              <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BatchProcess.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/BatchProcess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="68" column="46" lean-forward="false" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OutputStream.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/local/java/jdk1.8.0_162/src.zip!/java/io/OutputStream.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4218">
+              <caret line="137" column="16" lean-forward="false" selection-start-line="137" selection-start-column="16" selection-end-line="137" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nmt/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadWorkerThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/ReadWorkerThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1147">
+              <caret line="33" column="31" lean-forward="false" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dipml.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dipml.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SentencePairs.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/SentencePairs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/nmt/preprocess/pom.xml" />
+        <option value="$PROJECT_DIR$/nmt/preprocess/src/main/java/CoreNlpTokenize.java" />
+        <option value="$PROJECT_DIR$/nmt/src/main/java/com/dip/nmt/preprocess/EnZhTokenize.java" />
+        <option value="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/EnZhTokenize.java" />
+        <option value="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/SentencePairs.java" />
+        <option value="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/MyBlockingQueue.java" />
+        <option value="$PROJECT_DIR$/nmt/src/main/resources/configuration.properties" />
+        <option value="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/TokenWorkerThread.java" />
+        <option value="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/ReadWorkerThread.java" />
+        <option value="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/WriteWorkerThread.java" />
+        <option value="$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/BatchProcess.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/nmt/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="518" />
+    <option name="y" value="376" />
+    <option name="width" value="2769" />
+    <option name="height" value="1395" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DipMllib" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DipMllib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DipMllib" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DipMllib" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DipMllib" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DipMllib" type="462c0819:PsiDirectoryNode" />
+              <item name="nmt" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration name="BatchProcess" type="Application" factoryName="Application" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.dip.corenlp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.dip.corenlp.BatchProcess" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/test.txt $USER_HOME$/resultd.txt 10" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="nmt" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="78441303-179f-4cb7-989b-f0f0b967d7d7" name="Default" comment="" />
+      <created>1540895638480</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1540895638480</updated>
+      <workItem from="1540895642735" duration="2613000" />
+      <workItem from="1540949041317" duration="3020000" />
+      <workItem from="1540967625212" duration="256000" />
+      <workItem from="1540968510602" duration="92000" />
+      <workItem from="1540968783480" duration="25399000" />
+      <workItem from="1541031531665" duration="15642000" />
+      <workItem from="1541054385639" duration="117000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="47139000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="26" width="3840" height="2134" extended-state="6" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33245242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23541667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994792" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/BatchProcess.java</url>
+          <line>72</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="13" column="58" lean-forward="false" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="21" column="58" lean-forward="false" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/ReadWorkerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1147">
+          <caret line="33" column="31" lean-forward="false" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dipml.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/SentencePairs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/BatchProcess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2516">
+          <caret line="68" column="46" lean-forward="true" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/TokenWorkerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3626">
+          <caret line="108" column="17" lean-forward="false" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.9.2/stanford-corenlp-3.9.2.jar!/edu/stanford/nlp/pipeline/StanfordCoreNLP.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17205">
+          <caret line="546" column="16" lean-forward="false" selection-start-line="546" selection-start-column="16" selection-end-line="546" selection-end-column="16" />
+          <folding>
+            <marker date="1539066183000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1539066183000" expanded="false" signature="149:2792" ph="..." />
+            <marker date="1539066183000" expanded="true" signature="3865:4360" ph="{...}" />
+            <marker date="1539066183000" expanded="false" signature="4390:4401" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="4424:4430" ph=" }" />
+            <marker date="1539066183000" expanded="true" signature="4477:4583" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="4659:4729" ph="{...}" />
+            <marker date="1539066183000" expanded="false" signature="4785:4796" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="4828:4834" ph=" }" />
+            <marker date="1539066183000" expanded="true" signature="4920:5010" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="5115:7910" ph="{...}" />
+            <marker date="1539066183000" expanded="false" signature="7980:7991" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="8029:8035" ph=" }" />
+            <marker date="1539066183000" expanded="true" signature="8114:8449" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="8511:9015" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="9101:9384" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="9444:9536" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="9616:10552" ph="{...}" />
+            <marker date="1539066183000" expanded="false" signature="10591:10602" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="10625:10631" ph=" }" />
+            <marker date="1539066183000" expanded="false" signature="10664:10675" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="10731:10737" ph=" }" />
+            <marker date="1539066183000" expanded="true" signature="10832:14804" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="14854:15076" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="15135:15295" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="15410:18235" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="15561:15614" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="15663:15715" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="15762:15821" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="15865:15918" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="15964:16021" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16065:16112" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16164:16234" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16283:16353" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16408:16484" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16531:16591" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16640:16692" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16738:16787" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16841:16897" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16944:16994" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17040:17089" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17138:17191" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17241:17307" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17351:17405" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17454:17510" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17557:17607" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17654:17704" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17750:17799" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17857:17917" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17965:18016" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="18067:18115" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="18159:18206" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="18379:19263" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="18955:19145" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="18997:19129" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="19407:20392" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="20184:20358" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="20230:20338" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="20523:21403" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="21095:21285" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="21137:21269" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="21480:22139" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="21583:21685" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="21702:21794" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="22189:22284" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="22334:22538" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="22619:23358" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="23018:23330" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="23420:23597" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="23642:23765" ph="{...}" />
+            <marker date="1539066183000" expanded="false" signature="23834:23845" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="23893:23899" ph=" }" />
+            <marker date="1539066183000" expanded="false" signature="23967:23978" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="24026:24032" ph=" }" />
+            <marker date="1539066183000" expanded="true" signature="24111:24321" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="24407:24873" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="24953:25165" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="25246:25460" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="25532:26962" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="27028:32045" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="32085:32498" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="32544:33641" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="33711:33797" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="33914:34313" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="34426:34679" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="34464:34672" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="34828:36768" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="36846:37233" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="37377:37803" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="38100:38244" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="38599:48519" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="45099:48281" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="48650:48733" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="48848:48908" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="48951:48983" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="49043:51102" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="51166:51614" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="51659:52608" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="51800:51881" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="51923:52336" ph="{...}" />
+            <marker date="1539066183000" expanded="false" signature="52367:52382" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="52443:52453" ph=" }" />
+            <marker date="1539066183000" expanded="true" signature="52488:52602" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="52646:52805" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="52788:52799" ph="{}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_162/src.zip!/java/util/Properties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4625">
+          <caret line="164" column="31" lean-forward="false" selection-start-line="164" selection-start-column="31" selection-end-line="164" selection-end-column="31" />
+          <folding>
+            <element signature="e#5711#5712#0" expanded="false" />
+            <element signature="e#5749#5750#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_162/src.zip!/java/util/Hashtable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15318">
+          <caret line="456" column="26" lean-forward="false" selection-start-line="456" selection-start-column="26" selection-end-line="456" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/MyBlockingQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_162/src.zip!/java/io/FileOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10619">
+          <caret line="311" column="16" lean-forward="false" selection-start-line="311" selection-start-column="16" selection-end-line="311" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/SentencePairs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/ReadWorkerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1221">
+          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/resources/configuration.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/WriteWorkerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/preprocess/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/preprocess/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/preprocess/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/preprocess/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/nmt/preprocess/src/main/java/CoreNlpTokenize.java" />
+    <entry file="file://$PROJECT_DIR$/nmt/preprocess/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/nmt/preprocess/EnZhTokenize.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.9.2/stanford-corenlp-3.9.2.jar!/edu/stanford/nlp/util/ArrayCoreMap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_162/src.zip!/java/util/concurrent/LinkedBlockingDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2269">
+          <caret line="76" column="13" lean-forward="false" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_162/src.zip!/java/io/FileOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10619">
+          <caret line="311" column="16" lean-forward="false" selection-start-line="311" selection-start-column="16" selection-end-line="311" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_162/src.zip!/java/util/Hashtable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15318">
+          <caret line="456" column="26" lean-forward="false" selection-start-line="456" selection-start-column="26" selection-end-line="456" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_162/src.zip!/java/util/Properties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4625">
+          <caret line="164" column="31" lean-forward="false" selection-start-line="164" selection-start-column="31" selection-end-line="164" selection-end-column="31" />
+          <folding>
+            <element signature="e#5711#5712#0" expanded="false" />
+            <element signature="e#5749#5750#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.9.2/stanford-corenlp-3.9.2-models-chinese.jar!/StanfordCoreNLP-chinese.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-111">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/resources/configuration.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_162/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="164" column="11" lean-forward="false" selection-start-line="164" selection-start-column="11" selection-end-line="164" selection-end-column="11" />
+          <folding>
+            <element signature="e#6283#6284#0" expanded="false" />
+            <element signature="e#6351#6352#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.9.2/stanford-corenlp-3.9.2.jar!/edu/stanford/nlp/pipeline/StanfordCoreNLP.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="547" column="17" lean-forward="false" selection-start-line="547" selection-start-column="17" selection-end-line="547" selection-end-column="17" />
+          <folding>
+            <marker date="1539066183000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1539066183000" expanded="false" signature="149:2792" ph="..." />
+            <marker date="1539066183000" expanded="true" signature="3865:4360" ph="{...}" />
+            <marker date="1539066183000" expanded="false" signature="4390:4401" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="4424:4430" ph=" }" />
+            <marker date="1539066183000" expanded="true" signature="4477:4583" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="4659:4729" ph="{...}" />
+            <marker date="1539066183000" expanded="false" signature="4785:4796" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="4828:4834" ph=" }" />
+            <marker date="1539066183000" expanded="true" signature="4920:5010" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="5115:7910" ph="{...}" />
+            <marker date="1539066183000" expanded="false" signature="7980:7991" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="8029:8035" ph=" }" />
+            <marker date="1539066183000" expanded="true" signature="8114:8449" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="8511:9015" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="9101:9384" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="9444:9536" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="9616:10552" ph="{...}" />
+            <marker date="1539066183000" expanded="false" signature="10591:10602" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="10625:10631" ph=" }" />
+            <marker date="1539066183000" expanded="false" signature="10664:10675" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="10731:10737" ph=" }" />
+            <marker date="1539066183000" expanded="true" signature="10832:14804" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="14854:15076" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="15135:15295" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="15410:18235" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="15561:15614" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="15663:15715" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="15762:15821" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="15865:15918" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="15964:16021" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16065:16112" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16164:16234" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16283:16353" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16408:16484" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16531:16591" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16640:16692" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16738:16787" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16841:16897" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="16944:16994" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17040:17089" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17138:17191" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17241:17307" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17351:17405" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17454:17510" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17557:17607" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17654:17704" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17750:17799" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17857:17917" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="17965:18016" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="18067:18115" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="18159:18206" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="18379:19263" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="18955:19145" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="18997:19129" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="19407:20392" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="20184:20358" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="20230:20338" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="20523:21403" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="21095:21285" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="21137:21269" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="21480:22139" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="21583:21685" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="21702:21794" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="22189:22284" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="22334:22538" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="22619:23358" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="23018:23330" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="23420:23597" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="23642:23765" ph="{...}" />
+            <marker date="1539066183000" expanded="false" signature="23834:23845" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="23893:23899" ph=" }" />
+            <marker date="1539066183000" expanded="false" signature="23967:23978" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="24026:24032" ph=" }" />
+            <marker date="1539066183000" expanded="true" signature="24111:24321" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="24407:24873" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="24953:25165" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="25246:25460" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="25532:26962" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="27028:32045" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="32085:32498" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="32544:33641" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="33711:33797" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="33914:34313" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="34426:34679" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="34464:34672" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="34828:36768" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="36846:37233" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="37377:37803" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="38100:38244" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="38599:48519" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="45099:48281" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="48650:48733" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="48848:48908" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="48951:48983" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="49043:51102" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="51166:51614" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="51659:52608" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="51800:51881" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="51923:52336" ph="{...}" />
+            <marker date="1539066183000" expanded="false" signature="52367:52382" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="52443:52453" ph=" }" />
+            <marker date="1539066183000" expanded="true" signature="52488:52602" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="52646:52805" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="52788:52799" ph="{}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-corenlp/3.9.2/stanford-corenlp-3.9.2.jar!/edu/stanford/nlp/pipeline/AnnotationPipeline.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+          <folding>
+            <marker date="1539066183000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1539066183000" expanded="false" signature="149:1067" ph="..." />
+            <marker date="1539066183000" expanded="true" signature="1429:1670" ph="{...}" />
+            <marker date="1539066183000" expanded="false" signature="1703:1714" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="1736:1742" ph=" }" />
+            <marker date="1539066183000" expanded="true" signature="1794:1894" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="1944:2507" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="2568:2655" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="2747:2844" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="2921:2997" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="2978:2989" ph="{}" />
+            <marker date="1539066183000" expanded="true" signature="3105:4658" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="3427:4570" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="3543:4559" ph="{...}" />
+            <marker date="1539066183000" expanded="false" signature="3585:3608" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="3630:3648" ph=" }" />
+            <marker date="1539066183000" expanded="true" signature="3689:4452" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="3928:4411" ph="{...}" />
+            <marker date="1539066183000" expanded="false" signature="4490:4513" ph=" { " />
+            <marker date="1539066183000" expanded="false" signature="4527:4545" ph=" }" />
+            <marker date="1539066183000" expanded="true" signature="4694:4928" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="4968:5755" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="5829:6161" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="6222:6345" ph="{...}" />
+            <marker date="1539066183000" expanded="true" signature="6409:7483" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/SentencePairs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_162/src.zip!/java/io/OutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4218">
+          <caret line="137" column="16" lean-forward="false" selection-start-line="137" selection-start-column="16" selection-end-line="137" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/TokenWorkerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2516">
+          <caret line="78" column="30" lean-forward="false" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/ReadWorkerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1147">
+          <caret line="33" column="31" lean-forward="false" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/MyBlockingQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/WriteWorkerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1998">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/src/main/java/com/dip/corenlp/BatchProcess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="68" column="46" lean-forward="false" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dipml.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nmt/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.11.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>nmt</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: edu.stanford.nlp:stanford-corenlp:3.9.2:3.9.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

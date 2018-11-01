@@ -1,0 +1,6 @@
+com/dip/corenlp/TokenWorkerThread.class
+com/dip/corenlp/MyBlockingQueue.class
+com/dip/corenlp/SentencePairs.class
+com/dip/corenlp/BatchProcess.class
+com/dip/corenlp/ReadWorkerThread.class
+com/dip/corenlp/WriteWorkerThread.class
