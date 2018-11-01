@@ -23,7 +23,7 @@ public class BatchProcess {
     private BufferedReader in;
 
 
-    public BatchProcess(String inputPath, String outputPath, int batch) {
+    private BatchProcess(String inputPath, String outputPath, int batch) {
         this.batch = batch;
         try{
             this.outZh = new FileOutputStream(new File(outputPath + ".zh"));
@@ -100,7 +100,7 @@ public class BatchProcess {
     }
 }
 
-    public void process() throws Exception {
+    private void process() throws Exception {
         String str;
         int counter = 0;
         try {

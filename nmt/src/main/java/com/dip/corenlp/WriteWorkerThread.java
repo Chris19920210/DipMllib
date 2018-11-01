@@ -32,7 +32,6 @@ public class WriteWorkerThread implements Runnable {
                 if(this.read.getLastElement() && this.read.isEmpty()){
                     break;
                 }
-
                 SentencePairs<String,String> pair = read.take();
                 enSentences = pair.enSentences;
                 zhSentences = pair.zhSentences;
@@ -62,14 +61,17 @@ public class WriteWorkerThread implements Runnable {
             if(enResults.size() != 0){
                 outEn.write(String.join("\n", enResults).getBytes("UTF-8"));
                 outEn.write("\n".getBytes("UTF-8"));
+                outEn.flush();
                 enResults.clear();
                 outZh.write(String.join("\n", enResults).getBytes("UTF-8"));
                 outZh.write("\n".getBytes("UTF-8"));
+                outZh.flush();
                 zhResults.clear();
                 System.out.println("Done, with total records="+counter);
             }
         } catch(Exception e){
             e.printStackTrace();
         }
+
     }
 }

@@ -4,6 +4,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
@@ -49,7 +50,7 @@ public class TokenWorkerThread implements Runnable {
         }
     }
 
-    public TokenWorkerThread(MyBlockingQueue<SentencePairs<String,String>> read, MyBlockingQueue<SentencePairs<String,String>> write, int numThreads){
+    public TokenWorkerThread(MyBlockingQueue<SentencePairs<String,String>> read, MyBlockingQueue<SentencePairs<String,String>> write){
         this.read = read;
         this.write = write;
         this.zhPipeline = new StanfordCoreNLP(zhProps);
@@ -70,7 +71,10 @@ public class TokenWorkerThread implements Runnable {
                     }
                     break;
                 }
-                SentencePairs<String, String> SentencesPair = this.read.take();
+                SentencePairs<String, String> SentencesPair = this.read.poll(2, TimeUnit.SECONDS);
+                if(SentencesPair == null){
+                    continue;
+                }
                 enSentences = SentencesPair.enSentences;
                 zhSentences = SentencesPair.zhSentences;
 
