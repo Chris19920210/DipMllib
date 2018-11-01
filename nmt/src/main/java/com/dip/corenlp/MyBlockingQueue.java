@@ -5,28 +5,26 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class MyBlockingQueue<E> extends LinkedBlockingDeque<E> {
-    private boolean finish;
-    private boolean lastElement;
+    private AtomicInteger count;
+
 
     public MyBlockingQueue()
     {
         super();
-        this.finish = false;
-        this.lastElement = false;
+        count = new AtomicInteger(0);
     }
     public MyBlockingQueue(int capacity)
     {
         super(capacity);
-        this.finish = false;
-        this.lastElement = false;
+        count = new AtomicInteger(0);
     }
 
-    public void setLastElement(boolean lastElement) {
-        this.lastElement = lastElement;
+    public void increment(){
+        count.incrementAndGet();
     }
 
-    public boolean getLastElement(){
-        return this.lastElement;
+    public int get(){
+        return count.get();
     }
 
 

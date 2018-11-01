@@ -1,6 +1,7 @@
-/home/chris/idea_workspace/dipml/nmt/src/main/java/com/dip/corenlp/ReadWorkerThread.java
-/home/chris/idea_workspace/dipml/nmt/src/main/java/com/dip/corenlp/BatchProcess.java
-/home/chris/idea_workspace/dipml/nmt/src/main/java/com/dip/corenlp/MyBlockingQueue.java
-/home/chris/idea_workspace/dipml/nmt/src/main/java/com/dip/corenlp/SentencePairs.java
-/home/chris/idea_workspace/dipml/nmt/src/main/java/com/dip/corenlp/TokenWorkerThread.java
-/home/chris/idea_workspace/dipml/nmt/src/main/java/com/dip/corenlp/WriteWorkerThread.java
+/home/chris/idea_workspace/DipMllib/nmt/src/main/java/com/dip/corenlp/SentencePairs.java
+/home/chris/idea_workspace/DipMllib/nmt/src/main/java/com/dip/corenlp/MyBlockingQueue.java
+/home/chris/idea_workspace/DipMllib/nmt/src/main/java/com/dip/corenlp/TokenWorkerThread.java
+/home/chris/idea_workspace/DipMllib/nmt/src/main/java/com/dip/corenlp/ReadWorkerThread.java
+/home/chris/idea_workspace/DipMllib/nmt/src/main/java/com/dip/corenlp/BatchProcess.java
+/home/chris/idea_workspace/DipMllib/nmt/src/main/java/com/dip/corenlp/BatchProcessMultipleThread.java
+/home/chris/idea_workspace/DipMllib/nmt/src/main/java/com/dip/corenlp/WriteWorkerThread.java

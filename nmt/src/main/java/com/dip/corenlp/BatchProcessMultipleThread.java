@@ -42,7 +42,7 @@ public class BatchProcessMultipleThread {
 
         ExecutorService workers = Executors.newFixedThreadPool(numThreads);
         for(int i = 0; i < numThreads; i++){
-            workers.submit(new TokenWorkerThread(read, write));
+            workers.execute(new TokenWorkerThread(read, write));
         }
         workers.shutdown();
     }

@@ -25,7 +25,7 @@ public class TokenWorkerThread implements Runnable {
     {
         InputStream zhIn = Thread.currentThread()
                 .getContextClassLoader()
-                .getResourceAsStream("/StanfordCoreNLP-chinese.properties");
+                .getResourceAsStream("StanfordCoreNLP-chinese.properties");
         try {
             zhProps.load(zhIn);
             zhProps.setProperty("annotators", "tokenize,ssplit");
@@ -65,18 +65,21 @@ public class TokenWorkerThread implements Runnable {
         String zhSentences;
         List<String> results = new ArrayList<>();
         List<String> result = new ArrayList<>();
+        int counter = 0;
+        System.out.println("Thread="+ Thread.currentThread().getName() + " is parsing...");
         while(true) {
             try{
-                if(this.read.getLastElement() && this.read.isEmpty()){
-                    synchronized (this.write){
-                        this.write.setLastElement(true);
-                    }
+                if(this.read.get() > 0 && this.read.isEmpty()){
+                    this.write.increment();
                     break;
                 }
                 SentencePairs<String, String> SentencesPair = this.read.poll(2, TimeUnit.SECONDS);
                 if(SentencesPair == null){
                     continue;
                 }
+                counter += 1;
+                System.out.println("Thread="+ Thread.currentThread().getName() + " is parsing its "+ counter + " batch");
+
                 enSentences = SentencesPair.enSentences;
                 zhSentences = SentencesPair.zhSentences;
 
@@ -104,6 +107,7 @@ public class TokenWorkerThread implements Runnable {
                 }
                 enSentences = String.join("\n", results);
                 this.write.add(new SentencePairs<>(enSentences, zhSentences));
+                results.clear();
             }catch (Exception e){
                 e.printStackTrace();
             }
