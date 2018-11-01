@@ -39,7 +39,7 @@ public class ReadWorkerThread implements Runnable {
                 en.clear();
                 zh.clear();
             }
-            read.add(new SentencePairs<>("F", "F"));
+            read.setLastElement(true);
             in.close();
         } catch (Exception e){
             e.printStackTrace();

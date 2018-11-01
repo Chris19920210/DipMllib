@@ -6,7 +6,7 @@
     <groupId>com.dip.ml</groupId>
     <artifactId>DipMllib</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>dipml</name>
+    <name>DipMllib</name>
     <properties>
         <main.basedir>${project.basedir}</main.basedir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

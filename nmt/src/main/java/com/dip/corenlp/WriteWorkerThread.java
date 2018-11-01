@@ -7,40 +7,50 @@ import java.util.List;
 
 public class WriteWorkerThread implements Runnable {
     private MyBlockingQueue<SentencePairs<String,String>> read;
-    private FileOutputStream out;
+    private FileOutputStream outZh;
+    private FileOutputStream outEn;
     private int batch;
 
-    public WriteWorkerThread(FileOutputStream out, MyBlockingQueue<SentencePairs<String,String>> read, int batch){
-        this.out = out;
+    public WriteWorkerThread(FileOutputStream outZh, FileOutputStream outEn, MyBlockingQueue<SentencePairs<String,String>> read, int batch){
+        this.outZh = outZh;
+        this.outEn = outEn;
         this.read = read;
+        this.batch = batch;
     }
+
+
 
     @Override
     public void run() {
         String enSentences;
         String zhSentences;
         int counter = 0;
-        List<String> results = new ArrayList<>();
+        List<String> enResults = new ArrayList<>(batch);
+        List<String> zhResults = new ArrayList<>(batch);
         while(true){
             try{
+                if(this.read.getLastElement() && this.read.isEmpty()){
+                    break;
+                }
+
                 SentencePairs<String,String> pair = read.take();
                 enSentences = pair.enSentences;
                 zhSentences = pair.zhSentences;
-                if(enSentences.equals("F") && zhSentences.equals("F")){
-                    out.close();
-                    break;
-                }
+
                 String[] en = enSentences.split("\n");
                 String[] zh = zhSentences.split("\n");
 
                 for(int i = 0;  i < en.length; i++) {
                     counter += 1;
-                    String line = en[i] + "\t" + zh[i];
-                    results.add(line);
+                    enResults.add(en[i]);
+                    zhResults.add(zh[i]);
                     if(counter % batch == 0){
-                        out.write(String.join("\n", results).getBytes("UTF-8"));
-                        out.write("\n".getBytes("UTF-8"));
-                        results.clear();
+                        outEn.write(String.join("\n", enResults).getBytes("UTF-8"));
+                        outEn.write("\n".getBytes("UTF-8"));
+                        enResults.clear();
+                        outZh.write(String.join("\n", enResults).getBytes("UTF-8"));
+                        outZh.write("\n".getBytes("UTF-8"));
+                        zhResults.clear();
                         System.out.println("Batch=" + counter/batch);
                     }
                 }
@@ -49,10 +59,13 @@ public class WriteWorkerThread implements Runnable {
             }
         }
         try {
-            if(results.size() != 0){
-                out.write(String.join("\n", results).getBytes("UTF-8"));
-                out.flush();
-                results.clear();
+            if(enResults.size() != 0){
+                outEn.write(String.join("\n", enResults).getBytes("UTF-8"));
+                outEn.write("\n".getBytes("UTF-8"));
+                enResults.clear();
+                outZh.write(String.join("\n", enResults).getBytes("UTF-8"));
+                outZh.write("\n".getBytes("UTF-8"));
+                zhResults.clear();
                 System.out.println("Done, with total records="+counter);
             }
         } catch(Exception e){

@@ -14,13 +14,12 @@ import edu.stanford.nlp.util.CoreMap;
 
 public class TokenWorkerThread implements Runnable {
 
-    private MyBlockingQueue<SentencePairs<String,String>> read;
-    private MyBlockingQueue<SentencePairs<String,String>> write;
+    private final MyBlockingQueue<SentencePairs<String,String>> read;
+    private final MyBlockingQueue<SentencePairs<String,String>> write;
     private Properties zhProps = new Properties();
     private Properties enProps = new Properties();
     private StanfordCoreNLP zhPipeline;
     private StanfordCoreNLP enPipeline;
-    private int numThreads;
 
     {
         InputStream zhIn = Thread.currentThread()
@@ -55,8 +54,6 @@ public class TokenWorkerThread implements Runnable {
         this.write = write;
         this.zhPipeline = new StanfordCoreNLP(zhProps);
         this.enPipeline = new StanfordCoreNLP(enProps);
-        this.numThreads =numThreads;
-
     }
 
 
@@ -67,22 +64,16 @@ public class TokenWorkerThread implements Runnable {
         String zhSentences;
         while(true) {
             try{
-                if(this.read.getCount() > 0)
-                {
-                    this.read.increment();
-                    if(this.read.getCount() == numThreads) {
-                        this.write.add(new SentencePairs<>("F","F"));
+                if(this.read.getLastElement() && this.read.isEmpty()){
+                    synchronized (this.write){
+                        this.write.setLastElement(true);
                     }
                     break;
                 }
                 SentencePairs<String, String> SentencesPair = this.read.take();
                 enSentences = SentencesPair.enSentences;
                 zhSentences = SentencesPair.zhSentences;
-                if(enSentences.equals("F") && zhSentences.equals("F")){
-                    //this.write.add(new SentencePairs<>("F","F"));
-                    this.read.increment();
-                    break;
-                }
+
                 Annotation zhDocuments = new Annotation(zhSentences);
                 List<String> results = new ArrayList<>();
                 this.zhPipeline.annotate(zhDocuments);
