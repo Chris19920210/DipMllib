@@ -1,5 +1,7 @@
 package com.dip.corenlp;
 
+import utils.QueueElement;
+
 public class SentencePairs implements QueueElement<String> {
     private final String[] ret = new String[2];
 

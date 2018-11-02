@@ -1,8 +1,5 @@
-package com.dip.corenlp;
+package utils;
 
-
-import utils.MyBlockingQueue;
-import utils.MyFunctions;
 
 import java.io.BufferedReader;
 
@@ -13,7 +10,7 @@ public class ReadWorkerThread<T> implements Runnable {
     private MyFunctions.ThreeFunction<MyBlockingQueue<QueueElement<T>>, Integer, BufferedReader[]> processor;
 
 
-    ReadWorkerThread(MyBlockingQueue<QueueElement<T>> read,
+    public ReadWorkerThread(MyBlockingQueue<QueueElement<T>> read,
                      int batch,
                      MyFunctions.ThreeFunction<MyBlockingQueue<QueueElement<T>>, Integer, BufferedReader[]> processor,
                      BufferedReader... ins) {

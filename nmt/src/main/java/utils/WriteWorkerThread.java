@@ -1,8 +1,5 @@
-package com.dip.corenlp;
+package utils;
 
-
-import utils.MyBlockingQueue;
-import utils.MyFunctions;
 
 import java.io.FileOutputStream;
 import java.util.concurrent.TimeUnit;
@@ -14,7 +11,7 @@ public class WriteWorkerThread<T> implements Runnable {
     private FileOutputStream[] outs;
     private MyFunctions.TwoFunction<QueueElement<T>, FileOutputStream[]> processor;
 
-    WriteWorkerThread(MyBlockingQueue<QueueElement<T>> read,
+    public WriteWorkerThread(MyBlockingQueue<QueueElement<T>> read,
                       int numThreads,
                       MyFunctions.TwoFunction<QueueElement<T>, FileOutputStream[]> processor
             , FileOutputStream... outs) {

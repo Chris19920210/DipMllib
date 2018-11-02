@@ -1,12 +1,14 @@
 package com.dip.corenlp;
 
 
+import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import utils.MyBlockingQueue;
+import utils.QueueElement;
+import utils.ReadWorkerThread;
+import utils.WriteWorkerThread;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileReader;
+import java.io.*;
+import java.util.Properties;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -18,6 +20,36 @@ public class BatchProcessMultipleThread {
     private BufferedReader in;
     private int batch;
     private int numThreads;
+    private Properties zhProps = new Properties();
+    private Properties enProps = new Properties();
+
+    {
+        InputStream zhIn = Thread.currentThread()
+                .getContextClassLoader()
+                .getResourceAsStream("StanfordCoreNLP-chinese.properties");
+        try {
+            zhProps.load(zhIn);
+            zhProps.setProperty("annotators", "tokenize,ssplit");
+            zhProps.setProperty("ssplit.newlineIsSentenceBreak", "always");
+            zhProps.setProperty("ssplit.boundaryTokenRegex", "\n");
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (zhIn != null) zhIn.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        try {
+            enProps.setProperty("annotators", "tokenize,ssplit,truecase");
+            enProps.setProperty("ssplit.newlineIsSentenceBreak", "always");
+            enProps.setProperty("ssplit.boundaryTokenRegex", "\n");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     private BatchProcessMultipleThread(String inputPath, String outputPath, int batch, int numThreads) {
         this.batch = batch;
@@ -44,7 +76,9 @@ public class BatchProcessMultipleThread {
 
         ExecutorService workers = Executors.newFixedThreadPool(numThreads);
         for (int i = 0; i < numThreads; i++) {
-            workers.execute(new TokenWorkerThread(read, write, batch, ProcessUtils::TrueCaseTokenizeProcessor,"both"));
+            StanfordCoreNLP enPipeline = new StanfordCoreNLP(enProps);
+            StanfordCoreNLP zhPipeline = new StanfordCoreNLP(zhProps);
+            workers.execute(new TokenWorkerThread(read, write, batch, ProcessUtils::TrueCaseTokenizeProcessor, enPipeline, zhPipeline));
         }
         workers.shutdown();
     }

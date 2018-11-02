@@ -6,6 +6,7 @@ import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
 import utils.MyBlockingQueue;
+import utils.QueueElement;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
