@@ -61,27 +61,9 @@ public class ProcessUtils {
                                                                  StanfordCoreNLP[] pipelines) {
         int counter = 0;
         List<String> result = new ArrayList<>();
-        Annotation zhDocuments = new Annotation(element.get()[1]);
-        pipelines[1].annotate(zhDocuments);
-        List<CoreMap> sentenceTmp = zhDocuments.get(CoreAnnotations.SentencesAnnotation.class);
-        for (CoreMap sentence : sentenceTmp) {
-            counter += 1;
-            for (CoreLabel token : sentence.get(CoreAnnotations.TokensAnnotation.class)) {
-                result.add(token.word());
-            }
-            results[counter - 1] = String.join(" ", result);
-            result.clear();
-        }
-        String zhSentences;
-        if (counter == batch) {
-            zhSentences = String.join("\n", results);
-        } else {
-            zhSentences = String.join("\n", Arrays.asList(results).subList(0, counter));
-        }
         Annotation enDocuments = new Annotation(element.get()[0]);
         pipelines[0].annotate(enDocuments);
-        sentenceTmp = enDocuments.get(CoreAnnotations.SentencesAnnotation.class);
-        counter = 0;
+        List<CoreMap> sentenceTmp = enDocuments.get(CoreAnnotations.SentencesAnnotation.class);
         for (CoreMap sentence : sentenceTmp) {
             counter += 1;
             for (CoreLabel token : sentence.get(CoreAnnotations.TokensAnnotation.class)) {
@@ -96,6 +78,25 @@ public class ProcessUtils {
         } else {
             enSentences = String.join("\n", Arrays.asList(results).subList(0, counter));
         }
+        Annotation zhDocuments = new Annotation(element.get()[1]);
+        pipelines[1].annotate(zhDocuments);
+        sentenceTmp = zhDocuments.get(CoreAnnotations.SentencesAnnotation.class);
+        counter = 0;
+        for (CoreMap sentence : sentenceTmp) {
+            counter += 1;
+            for (CoreLabel token : sentence.get(CoreAnnotations.TokensAnnotation.class)) {
+                result.add(token.word());
+            }
+            results[counter - 1] = String.join(" ", result);
+            result.clear();
+        }
+        String zhSentences;
+        if (counter == batch) {
+            zhSentences = String.join("\n", results);
+        } else {
+            zhSentences = String.join("\n", Arrays.asList(results).subList(0, counter));
+        }
+
         return new SentencePairs(enSentences, zhSentences);
     }
 }
