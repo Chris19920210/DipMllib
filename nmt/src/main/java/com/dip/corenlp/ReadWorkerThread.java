@@ -6,16 +6,16 @@ import utils.MyFunctions;
 
 import java.io.BufferedReader;
 
-public class ReadWorkerThread implements Runnable {
+public class ReadWorkerThread<T> implements Runnable {
     private BufferedReader[] ins;
-    private MyBlockingQueue<QueueElement<String>> read;
+    private MyBlockingQueue<QueueElement<T>> read;
     private int batch;
-    private MyFunctions.ThreeFunction<MyBlockingQueue<QueueElement<String>>, Integer, BufferedReader[]> processor;
+    private MyFunctions.ThreeFunction<MyBlockingQueue<QueueElement<T>>, Integer, BufferedReader[]> processor;
 
 
-    ReadWorkerThread(MyBlockingQueue<QueueElement<String>> read,
+    ReadWorkerThread(MyBlockingQueue<QueueElement<T>> read,
                      int batch,
-                     MyFunctions.ThreeFunction<MyBlockingQueue<QueueElement<String>>, Integer, BufferedReader[]> processor,
+                     MyFunctions.ThreeFunction<MyBlockingQueue<QueueElement<T>>, Integer, BufferedReader[]> processor,
                      BufferedReader... ins) {
         this.ins = ins;
         this.read = read;

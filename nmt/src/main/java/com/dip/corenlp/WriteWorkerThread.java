@@ -8,15 +8,15 @@ import java.io.FileOutputStream;
 import java.util.concurrent.TimeUnit;
 
 
-public class WriteWorkerThread implements Runnable {
-    private MyBlockingQueue<QueueElement<String>> read;
+public class WriteWorkerThread<T> implements Runnable {
+    private MyBlockingQueue<QueueElement<T>> read;
     private int numThreads;
     private FileOutputStream[] outs;
-    private MyFunctions.TwoFunction<QueueElement<String>, FileOutputStream[]> processor;
+    private MyFunctions.TwoFunction<QueueElement<T>, FileOutputStream[]> processor;
 
-    WriteWorkerThread(MyBlockingQueue<QueueElement<String>> read,
+    WriteWorkerThread(MyBlockingQueue<QueueElement<T>> read,
                       int numThreads,
-                      MyFunctions.TwoFunction<QueueElement<String>, FileOutputStream[]> processor
+                      MyFunctions.TwoFunction<QueueElement<T>, FileOutputStream[]> processor
             , FileOutputStream... outs) {
         this.outs = outs;
         this.read = read;
@@ -34,7 +34,7 @@ public class WriteWorkerThread implements Runnable {
                     break;
                 }
 
-                QueueElement<String> pair = this.read.poll(1, TimeUnit.SECONDS);
+                QueueElement<T> pair = this.read.poll(1, TimeUnit.SECONDS);
                 if (pair == null) {
                     continue;
                 }

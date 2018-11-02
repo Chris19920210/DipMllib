@@ -36,10 +36,10 @@ public class BatchProcessMultipleThread {
 
     private void process() {
 
-        Thread reader = new Thread(new ReadWorkerThread(read, batch, ProcessUtils::SentencePairReader, in));
+        Thread reader = new Thread(new ReadWorkerThread<>(read, batch, ProcessUtils::SentencePairReader, in));
         reader.start();
 
-        Thread writer = new Thread(new WriteWorkerThread(write, numThreads, ProcessUtils::SentencePairWriter, outEn, outZh));
+        Thread writer = new Thread(new WriteWorkerThread<>(write, numThreads, ProcessUtils::SentencePairWriter, outEn, outZh));
         writer.start();
 
         ExecutorService workers = Executors.newFixedThreadPool(numThreads);

@@ -1,18 +1,15 @@
 package com.dip.corenlp;
 
 public class SentencePairs implements QueueElement<String> {
-    private final String enSentences;
-    private final String zhSentences;
+    private final String[] ret = new String[2];
 
     SentencePairs(String enSentences, String zhSentences) {
-        this.enSentences = enSentences;
-        this.zhSentences = zhSentences;
+        ret[0] = enSentences;
+        ret[1] = zhSentences;
+
     }
 
     public String[] get() {
-        String[] ret = new String[2];
-        ret[0] = enSentences;
-        ret[1] = zhSentences;
         return ret;
     }
 }
