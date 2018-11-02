@@ -16,13 +16,11 @@ public class TokenWorkerThread implements Runnable {
     private final MyBlockingQueue<QueueElement<String>> write;
     private Properties zhProps = new Properties();
     private Properties enProps = new Properties();
-    private StanfordCoreNLP zhPipeline;
-    private StanfordCoreNLP enPipeline;
-    private MyFunctions.SixFunction<StanfordCoreNLP,
-            StanfordCoreNLP, QueueElement<String>, Integer, String[], QueueElement<String>> processor;
+    private MyFunctions.FiveFunction<QueueElement<String>, Integer, String[], StanfordCoreNLP[], QueueElement<String>> processor;
     private int batch;
+    private StanfordCoreNLP[] pipelines = new StanfordCoreNLP[2];
 
-    {
+    private void loadChinese() {
         InputStream zhIn = Thread.currentThread()
                 .getContextClassLoader()
                 .getResourceAsStream("StanfordCoreNLP-chinese.properties");
@@ -41,6 +39,9 @@ public class TokenWorkerThread implements Runnable {
             }
         }
 
+    }
+
+    private void loadEnglish() {
         try {
             enProps.setProperty("annotators", "tokenize,ssplit,truecase");
             enProps.setProperty("ssplit.newlineIsSentenceBreak", "always");
@@ -53,16 +54,24 @@ public class TokenWorkerThread implements Runnable {
     TokenWorkerThread(MyBlockingQueue<QueueElement<String>> read,
                       MyBlockingQueue<QueueElement<String>> write,
                       int batch,
-                      MyFunctions.SixFunction<StanfordCoreNLP,
-                              StanfordCoreNLP,
-                              QueueElement<String>,
-                              Integer,
-                              String[],
-                              QueueElement<String>> processor) {
+                      MyFunctions.FiveFunction<QueueElement<String>, Integer, String[], StanfordCoreNLP[], QueueElement<String>> processor,
+                      String lang) {
         this.read = read;
         this.write = write;
-        this.zhPipeline = new StanfordCoreNLP(zhProps);
-        this.enPipeline = new StanfordCoreNLP(enProps);
+        switch (lang) {
+            case "both":
+                this.loadChinese();
+                this.loadEnglish();
+                pipelines[0] = new StanfordCoreNLP(enProps);
+                pipelines[1] = new StanfordCoreNLP(zhProps);
+
+            case "zh":
+                this.loadChinese();
+                pipelines[0] = new StanfordCoreNLP(zhProps);
+            case "en":
+                this.loadEnglish();
+                pipelines[0] = new StanfordCoreNLP(enProps);
+        }
         this.processor = processor;
         this.batch = batch;
     }
@@ -85,9 +94,10 @@ public class TokenWorkerThread implements Runnable {
                 }
                 counter += 1;
                 System.out.println("Thread=" + Thread.currentThread().getName() + " is parsing its " + counter + " batch");
-
-                QueueElement<String> processed = this.processor.apply(this.enPipeline,
-                        this.zhPipeline, element, batch, results);
+                if (pipelines.length != 2) {
+                    System.out.println(pipelines.length);
+                }
+                QueueElement<String> processed = this.processor.apply(element, batch, results, pipelines);
 
                 this.write.add(processed);
             } catch (Exception e) {

@@ -44,7 +44,7 @@ public class BatchProcessMultipleThread {
 
         ExecutorService workers = Executors.newFixedThreadPool(numThreads);
         for (int i = 0; i < numThreads; i++) {
-            workers.execute(new TokenWorkerThread(read, write, batch, ProcessUtils::TrueCaseTokenizeProcessor));
+            workers.execute(new TokenWorkerThread(read, write, batch, ProcessUtils::TrueCaseTokenizeProcessor,"both"));
         }
         workers.shutdown();
     }

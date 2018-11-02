@@ -54,15 +54,14 @@ public class ProcessUtils {
         }
     }
 
-    public static QueueElement<String> TrueCaseTokenizeProcessor(StanfordCoreNLP enPipeline,
-                                                                 StanfordCoreNLP zhPipeline,
-                                                                 QueueElement<String> element,
+    public static QueueElement<String> TrueCaseTokenizeProcessor(QueueElement<String> element,
                                                                  int batch,
-                                                                 String[] results) {
+                                                                 String[] results,
+                                                                 StanfordCoreNLP[] pipelines) {
         int counter = 0;
         List<String> result = new ArrayList<>();
         Annotation zhDocuments = new Annotation(element.get()[1]);
-        zhPipeline.annotate(zhDocuments);
+        pipelines[1].annotate(zhDocuments);
         List<CoreMap> sentenceTmp = zhDocuments.get(CoreAnnotations.SentencesAnnotation.class);
         for (CoreMap sentence : sentenceTmp) {
             counter += 1;
@@ -79,7 +78,7 @@ public class ProcessUtils {
             zhSentences = String.join("\n", Arrays.asList(results).subList(0, counter));
         }
         Annotation enDocuments = new Annotation(element.get()[0]);
-        enPipeline.annotate(enDocuments);
+        pipelines[0].annotate(enDocuments);
         sentenceTmp = enDocuments.get(CoreAnnotations.SentencesAnnotation.class);
         counter = 0;
         for (CoreMap sentence : sentenceTmp) {

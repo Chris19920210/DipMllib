@@ -14,7 +14,7 @@ public class MyFunctions {
     }
 
     @FunctionalInterface
-    public interface SixFunction<A, B, C, D, E, F> {
-        F apply(A a, B b, C c, D d, E e);
+    public interface FiveFunction<A, B, C, D, E> {
+        E apply(A a, B b, C c, D d);
     }
 }
