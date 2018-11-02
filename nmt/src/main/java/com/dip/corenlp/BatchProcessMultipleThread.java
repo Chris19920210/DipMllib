@@ -25,31 +25,31 @@ public class BatchProcessMultipleThread {
         this.write = new MyBlockingQueue<>();
         this.numThreads = numThreads;
 
-        try{
+        try {
             this.outZh = new FileOutputStream(new File(outputPath + ".zh"));
             this.outEn = new FileOutputStream(new File(outputPath + ".en"));
             this.in = new BufferedReader(new FileReader(inputPath));
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private void process(){
+    private void process() {
 
-        Thread reader = new Thread(new ReadWorkerThread(in, read, batch));
+        Thread reader = new Thread(new ReadWorkerThread(read, batch, ProcessUtils::SentencePairReader, in));
         reader.start();
 
-        Thread writer = new Thread(new WriteWorkerThread(outZh, outEn, write, numThreads,ProcessUtils::SentencePairWriter));
+        Thread writer = new Thread(new WriteWorkerThread(write, numThreads, ProcessUtils::SentencePairWriter, outEn, outZh));
         writer.start();
 
         ExecutorService workers = Executors.newFixedThreadPool(numThreads);
-        for(int i = 0; i < numThreads; i++){
+        for (int i = 0; i < numThreads; i++) {
             workers.execute(new TokenWorkerThread(read, write, batch, ProcessUtils::TrueCaseTokenizeProcessor));
         }
         workers.shutdown();
     }
 
-    public static void main (String[] args){
+    public static void main(String[] args) {
         String inputPath = args[0];
         String outputPath = args[1];
         int batch = Integer.parseInt(args[2]);

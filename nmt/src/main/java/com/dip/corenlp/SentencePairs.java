@@ -8,7 +8,8 @@ public class SentencePairs implements QueueElement<String> {
         this.enSentences = enSentences;
         this.zhSentences = zhSentences;
     }
-    public String[] get(){
+
+    public String[] get() {
         String[] ret = new String[2];
         ret[0] = enSentences;
         ret[1] = zhSentences;

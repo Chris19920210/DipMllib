@@ -8,20 +8,19 @@ public class MyBlockingQueue<E> extends LinkedBlockingDeque<E> {
     private AtomicInteger count = new AtomicInteger(0);
 
 
-    public MyBlockingQueue()
-    {
+    public MyBlockingQueue() {
         super();
     }
-    public MyBlockingQueue(int capacity)
-    {
+
+    public MyBlockingQueue(int capacity) {
         super(capacity);
     }
 
-    public void increment(){
+    public void increment() {
         count.incrementAndGet();
     }
 
-    public int get(){
+    public int get() {
         return count.get();
     }
 

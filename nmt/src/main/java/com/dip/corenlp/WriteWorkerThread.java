@@ -8,18 +8,17 @@ import java.io.FileOutputStream;
 import java.util.concurrent.TimeUnit;
 
 
-
 public class WriteWorkerThread implements Runnable {
     private MyBlockingQueue<QueueElement<String>> read;
-    private FileOutputStream outZh;
-    private FileOutputStream outEn;
     private int numThreads;
-    private MyFunctions.ThreeFunction<FileOutputStream,FileOutputStream, QueueElement<String>> processor;
+    private FileOutputStream[] outs;
+    private MyFunctions.TwoFunction<QueueElement<String>, FileOutputStream[]> processor;
 
-    WriteWorkerThread(FileOutputStream outZh, FileOutputStream outEn, MyBlockingQueue<QueueElement<String>> read,
-                             int numThreads, MyFunctions.ThreeFunction<FileOutputStream,FileOutputStream, QueueElement<String>> processor){
-        this.outZh = outZh;
-        this.outEn = outEn;
+    WriteWorkerThread(MyBlockingQueue<QueueElement<String>> read,
+                      int numThreads,
+                      MyFunctions.TwoFunction<QueueElement<String>, FileOutputStream[]> processor
+            , FileOutputStream... outs) {
+        this.outs = outs;
         this.read = read;
         this.numThreads = numThreads;
         this.processor = processor;
@@ -29,29 +28,30 @@ public class WriteWorkerThread implements Runnable {
     @Override
     public void run() {
         int counter = 0;
-        while(true){
-            try{
-                if(this.read.get() == numThreads && this.read.isEmpty()){
+        while (true) {
+            try {
+                if (this.read.get() == numThreads && this.read.isEmpty()) {
                     break;
                 }
 
                 QueueElement<String> pair = this.read.poll(1, TimeUnit.SECONDS);
-                if(pair == null) {
+                if (pair == null) {
                     continue;
                 }
 
                 counter += 1;
-                this.processor.apply(outEn, outZh, pair);
+                this.processor.apply(pair, outs);
                 System.out.println("Batch=" + counter);
-            } catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
         try {
             System.out.println("Done");
-            this.outEn.flush();
-            this.outZh.flush();
-        } catch(Exception e){
+            for (FileOutputStream o : outs) {
+                o.flush();
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
