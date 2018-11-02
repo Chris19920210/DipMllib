@@ -1,6 +1,8 @@
 package com.dip.corenlp;
 
 
+import utils.MyBlockingQueue;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -9,8 +11,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class BatchProcessMultipleThread {
-    private MyBlockingQueue<SentencePairs<String, String>> read;
-    private MyBlockingQueue<SentencePairs<String,String>> write;
+    private MyBlockingQueue<QueueElement<String>> read;
+    private MyBlockingQueue<QueueElement<String>> write;
     private FileOutputStream outZh;
     private FileOutputStream outEn;
     private BufferedReader in;
@@ -37,12 +39,12 @@ public class BatchProcessMultipleThread {
         Thread reader = new Thread(new ReadWorkerThread(in, read, batch));
         reader.start();
 
-        Thread writer = new Thread(new WriteWorkerThread(outZh,outEn,write, numThreads));
+        Thread writer = new Thread(new WriteWorkerThread(outZh, outEn, write, numThreads,ProcessUtils::SentencePairWriter));
         writer.start();
 
         ExecutorService workers = Executors.newFixedThreadPool(numThreads);
         for(int i = 0; i < numThreads; i++){
-            workers.execute(new TokenWorkerThread(read, write));
+            workers.execute(new TokenWorkerThread(read, write, batch, ProcessUtils::TrueCaseTokenizeProcessor));
         }
         workers.shutdown();
     }

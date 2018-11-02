@@ -1,47 +1,47 @@
 package com.dip.corenlp;
 
 
+import utils.MyBlockingQueue;
+import utils.MyFunctions;
+
 import java.io.FileOutputStream;
+import java.util.concurrent.TimeUnit;
+
 
 
 public class WriteWorkerThread implements Runnable {
-    private MyBlockingQueue<SentencePairs<String,String>> read;
+    private MyBlockingQueue<QueueElement<String>> read;
     private FileOutputStream outZh;
     private FileOutputStream outEn;
     private int numThreads;
+    private MyFunctions.ThreeFunction<FileOutputStream,FileOutputStream, QueueElement<String>> processor;
 
-    public WriteWorkerThread(FileOutputStream outZh, FileOutputStream outEn, MyBlockingQueue<SentencePairs<String,String>> read, int numThreads){
+    WriteWorkerThread(FileOutputStream outZh, FileOutputStream outEn, MyBlockingQueue<QueueElement<String>> read,
+                             int numThreads, MyFunctions.ThreeFunction<FileOutputStream,FileOutputStream, QueueElement<String>> processor){
         this.outZh = outZh;
         this.outEn = outEn;
         this.read = read;
         this.numThreads = numThreads;
+        this.processor = processor;
     }
 
 
     @Override
     public void run() {
-        String enSentences;
-        String zhSentences;
         int counter = 0;
         while(true){
             try{
                 if(this.read.get() == numThreads && this.read.isEmpty()){
                     break;
                 }
-                if(this.read.get() < numThreads && this.read.isEmpty() ){
-                    Thread.sleep(1000);
+
+                QueueElement<String> pair = this.read.poll(1, TimeUnit.SECONDS);
+                if(pair == null) {
                     continue;
                 }
 
                 counter += 1;
-                SentencePairs<String,String> pair = this.read.take();
-
-                enSentences = pair.enSentences;
-                zhSentences = pair.zhSentences;
-                this.outEn.write(enSentences.getBytes("UTF-8"));
-                this.outEn.write("\n".getBytes("UTF-8"));
-                this.outZh.write(zhSentences.getBytes("UTF-8"));
-                this.outZh.write("\n".getBytes("UTF-8"));
+                this.processor.apply(outEn, outZh, pair);
                 System.out.println("Batch=" + counter);
             } catch (Exception e){
                 e.printStackTrace();

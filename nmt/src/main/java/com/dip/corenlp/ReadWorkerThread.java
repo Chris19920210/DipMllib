@@ -1,16 +1,18 @@
 package com.dip.corenlp;
 
+
+import utils.MyBlockingQueue;
+
 import java.io.BufferedReader;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 public class ReadWorkerThread implements Runnable {
     private BufferedReader in;
-    private MyBlockingQueue<SentencePairs<String,String>> read;
+    private MyBlockingQueue<QueueElement<String>> read;
     private int batch;
 
 
-    public ReadWorkerThread(BufferedReader in, MyBlockingQueue<SentencePairs<String, String>> read, int batch){
+    ReadWorkerThread(BufferedReader in, MyBlockingQueue<QueueElement<String>> read, int batch){
         this.in=in;
         this.read=read;
         this.batch=batch;
@@ -21,24 +23,21 @@ public class ReadWorkerThread implements Runnable {
         String str;
         int counter = 0;
         String[] tmp;
-        List<String> en = new ArrayList<>();
-        List<String> zh = new ArrayList<>();
+        String[] en = new String[batch];
+        String[] zh = new String[batch];
         try{
             while((str = in.readLine()) != null) {
                 counter += 1;
                 tmp = str.split("\t");
-                en.add(tmp[0]);
-                zh.add(tmp[1]);
+                en[counter % batch - 1 < 0 ? batch - 1: counter % batch - 1] = tmp[0];
+                zh[counter % batch - 1 < 0 ? batch - 1: counter % batch - 1] = tmp[1];
                 if (counter % batch == 0) {
-                    read.add(new SentencePairs<>(String.join("\n", en), String.join("\n", zh)));
-                    en.clear();
-                    zh.clear();
+                    read.add(new SentencePairs(String.join("\n", en), String.join("\n", zh)));
                 }
             }
-            if(en.size() != 0){
-                read.add(new SentencePairs<>(String.join("\n", en), String.join("\n", zh)));
-                en.clear();
-                zh.clear();
+            if(counter % batch != 0){
+                read.add(new SentencePairs(String.join("\n", Arrays.asList(en).subList(0, counter % batch)),
+                        String.join("\n", Arrays.asList(zh).subList(0, counter % batch))));
             }
             read.increment();
             in.close();

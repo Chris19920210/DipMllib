@@ -1,26 +1,24 @@
 package com.dip.corenlp;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
-import edu.stanford.nlp.ling.CoreAnnotations;
-import edu.stanford.nlp.ling.CoreLabel;
-import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
-import edu.stanford.nlp.util.CoreMap;
+import utils.MyBlockingQueue;
+import utils.MyFunctions;
 
 
 public class TokenWorkerThread implements Runnable {
 
-    private final MyBlockingQueue<SentencePairs<String,String>> read;
-    private final MyBlockingQueue<SentencePairs<String,String>> write;
+    private final MyBlockingQueue<QueueElement<String>> read;
+    private final MyBlockingQueue<QueueElement<String>> write;
     private Properties zhProps = new Properties();
     private Properties enProps = new Properties();
     private StanfordCoreNLP zhPipeline;
     private StanfordCoreNLP enPipeline;
+    private MyFunctions.SixFunction<StanfordCoreNLP,
+            StanfordCoreNLP, QueueElement<String>, Integer,String[], QueueElement<String>> processor;
+    private int batch;
 
     {
         InputStream zhIn = Thread.currentThread()
@@ -50,21 +48,28 @@ public class TokenWorkerThread implements Runnable {
         }
     }
 
-    public TokenWorkerThread(MyBlockingQueue<SentencePairs<String,String>> read, MyBlockingQueue<SentencePairs<String,String>> write){
+    TokenWorkerThread(MyBlockingQueue<QueueElement<String>> read,
+                             MyBlockingQueue<QueueElement<String>> write,
+                             int batch,
+                             MyFunctions.SixFunction<StanfordCoreNLP,
+                                     StanfordCoreNLP,
+                                     QueueElement<String>,
+                                     Integer,
+                                     String[],
+                                     QueueElement<String>> processor){
         this.read = read;
         this.write = write;
         this.zhPipeline = new StanfordCoreNLP(zhProps);
         this.enPipeline = new StanfordCoreNLP(enProps);
+        this.processor = processor;
+        this.batch = batch;
     }
 
 
 
     @Override
     public void run() {
-        String enSentences;
-        String zhSentences;
-        List<String> results = new ArrayList<>();
-        List<String> result = new ArrayList<>();
+        String[] results = new String[batch];
         int counter = 0;
         System.out.println("Thread="+ Thread.currentThread().getName() + " is parsing...");
         while(true) {
@@ -73,41 +78,17 @@ public class TokenWorkerThread implements Runnable {
                     this.write.increment();
                     break;
                 }
-                SentencePairs<String, String> SentencesPair = this.read.poll(2, TimeUnit.SECONDS);
-                if(SentencesPair == null){
+                QueueElement<String> element = this.read.poll(2, TimeUnit.SECONDS);
+                if(element == null){
                     continue;
                 }
                 counter += 1;
                 System.out.println("Thread="+ Thread.currentThread().getName() + " is parsing its "+ counter + " batch");
 
-                enSentences = SentencesPair.enSentences;
-                zhSentences = SentencesPair.zhSentences;
+                QueueElement<String> processed = this.processor.apply(this.enPipeline,
+                        this.zhPipeline, element, batch, results);
 
-                Annotation zhDocuments = new Annotation(zhSentences);
-                this.zhPipeline.annotate(zhDocuments);
-                List<CoreMap> sentenceTmp = zhDocuments.get(CoreAnnotations.SentencesAnnotation.class);
-                for (CoreMap sentence: sentenceTmp) {
-                    for (CoreLabel token: sentence.get(CoreAnnotations.TokensAnnotation.class)){
-                        result.add(token.word());
-                    }
-                    results.add(String.join(" ", result));
-                    result.clear();
-                }
-                zhSentences = String.join("\n", results);
-                results.clear();
-                Annotation enDocuments = new Annotation(enSentences);
-                this.enPipeline.annotate(enDocuments);
-                sentenceTmp = enDocuments.get(CoreAnnotations.SentencesAnnotation.class);
-                for (CoreMap sentence:sentenceTmp) {
-                    for (CoreLabel token: sentence.get(CoreAnnotations.TokensAnnotation.class)){
-                        result.add(token.get(CoreAnnotations.TrueCaseTextAnnotation.class));
-                    }
-                    results.add(String.join(" ", result));
-                    result.clear();
-                }
-                enSentences = String.join("\n", results);
-                this.write.add(new SentencePairs<>(enSentences, zhSentences));
-                results.clear();
+                this.write.add(processed);
             }catch (Exception e){
                 e.printStackTrace();
             }

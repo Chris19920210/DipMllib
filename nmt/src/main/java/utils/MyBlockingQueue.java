@@ -1,4 +1,4 @@
-package com.dip.corenlp;
+package utils;
 
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.atomic.AtomicInteger;
