@@ -48,9 +48,6 @@ public class TokenWorkerThread implements Runnable {
                 }
                 counter += 1;
                 System.out.println("Thread=" + Thread.currentThread().getName() + " is parsing its " + counter + " batch");
-                if (pipelines.length != 2) {
-                    System.out.println(pipelines.length);
-                }
                 QueueElement<String> processed = this.processor.apply(element, batch, results, pipelines);
 
                 this.write.add(processed);
