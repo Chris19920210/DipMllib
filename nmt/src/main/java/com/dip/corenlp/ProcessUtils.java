@@ -3,9 +3,9 @@ package com.dip.corenlp;
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.Annotation;
-import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
 import utils.MyBlockingQueue;
+import utils.MyPipeline;
 import utils.QueueElement;
 
 import java.io.BufferedReader;
@@ -58,11 +58,11 @@ public class ProcessUtils {
     public static QueueElement<String> TrueCaseTokenizeProcessor(QueueElement<String> element,
                                                                  int batch,
                                                                  String[] results,
-                                                                 StanfordCoreNLP[] pipelines) {
+                                                                 MyPipeline<Annotation>[] pipelines) {
         int counter = 0;
         List<String> result = new ArrayList<>();
         Annotation enDocuments = new Annotation(element.get()[0]);
-        pipelines[0].annotate(enDocuments);
+        pipelines[0].dealWith(enDocuments);
         List<CoreMap> sentenceTmp = enDocuments.get(CoreAnnotations.SentencesAnnotation.class);
         for (CoreMap sentence : sentenceTmp) {
             counter += 1;
@@ -79,7 +79,7 @@ public class ProcessUtils {
             enSentences = String.join("\n", Arrays.asList(results).subList(0, counter));
         }
         Annotation zhDocuments = new Annotation(element.get()[1]);
-        pipelines[1].annotate(zhDocuments);
+        pipelines[1].dealWith(zhDocuments);
         sentenceTmp = zhDocuments.get(CoreAnnotations.SentencesAnnotation.class);
         counter = 0;
         for (CoreMap sentence : sentenceTmp) {

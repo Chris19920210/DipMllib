@@ -1,11 +1,7 @@
 package com.dip.corenlp;
 
 
-import edu.stanford.nlp.pipeline.StanfordCoreNLP;
-import utils.MyBlockingQueue;
-import utils.QueueElement;
-import utils.ReadWorkerThread;
-import utils.WriteWorkerThread;
+import utils.*;
 
 import java.io.*;
 import java.util.Properties;
@@ -76,9 +72,9 @@ public class BatchProcessMultipleThread {
 
         ExecutorService workers = Executors.newFixedThreadPool(numThreads);
         for (int i = 0; i < numThreads; i++) {
-            StanfordCoreNLP enPipeline = new StanfordCoreNLP(enProps);
-            StanfordCoreNLP zhPipeline = new StanfordCoreNLP(zhProps);
-            workers.execute(new TokenWorkerThread(read, write, batch, ProcessUtils::TrueCaseTokenizeProcessor, enPipeline, zhPipeline));
+            MyCoreNLP enPipeline = new MyCoreNLP(enProps);
+            MyCoreNLP zhPipeline = new MyCoreNLP(zhProps);
+            workers.execute(new ProcessWorkerThread(read, write, batch, ProcessUtils::TrueCaseTokenizeProcessor, enPipeline, zhPipeline));
         }
         workers.shutdown();
     }

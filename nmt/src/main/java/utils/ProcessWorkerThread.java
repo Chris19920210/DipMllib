@@ -1,28 +1,23 @@
-package com.dip.corenlp;
+package utils;
 
 import java.util.concurrent.TimeUnit;
 
-import edu.stanford.nlp.pipeline.StanfordCoreNLP;
-import utils.MyBlockingQueue;
-import utils.MyFunctions;
-import utils.QueueElement;
 
-
-public class TokenWorkerThread implements Runnable {
+public class ProcessWorkerThread implements Runnable {
 
     private final MyBlockingQueue<QueueElement<String>> read;
     private final MyBlockingQueue<QueueElement<String>> write;
 
-    private MyFunctions.FiveFunction<QueueElement<String>, Integer, String[], StanfordCoreNLP[], QueueElement<String>> processor;
+    private MyFunctions.FiveFunction<QueueElement<String>, Integer, String[], MyPipeline[], QueueElement<String>> processor;
     private int batch;
-    private StanfordCoreNLP[] pipelines;
+    private MyPipeline[] pipelines;
 
 
-    TokenWorkerThread(MyBlockingQueue<QueueElement<String>> read,
-                      MyBlockingQueue<QueueElement<String>> write,
-                      int batch,
-                      MyFunctions.FiveFunction<QueueElement<String>, Integer, String[], StanfordCoreNLP[], QueueElement<String>> processor,
-                      StanfordCoreNLP... pipelines) {
+    public ProcessWorkerThread(MyBlockingQueue<QueueElement<String>> read,
+                        MyBlockingQueue<QueueElement<String>> write,
+                        int batch,
+                        MyFunctions.FiveFunction<QueueElement<String>, Integer, String[], MyPipeline[], QueueElement<String>> processor,
+                        MyPipeline... pipelines) {
         this.read = read;
         this.write = write;
         this.pipelines = pipelines;
