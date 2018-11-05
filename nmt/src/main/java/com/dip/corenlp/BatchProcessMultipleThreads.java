@@ -8,7 +8,7 @@ import java.util.Properties;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class BatchProcessMultipleThread {
+public class BatchProcessMultipleThreads {
     private MyBlockingQueue<QueueElement<String>> read;
     private MyBlockingQueue<QueueElement<String>> write;
     private FileOutputStream outZh;
@@ -47,7 +47,7 @@ public class BatchProcessMultipleThread {
         }
     }
 
-    private BatchProcessMultipleThread(String inputPath, String outputPath, int batch, int numThreads) {
+    private BatchProcessMultipleThreads(String inputPath, String outputPath, int batch, int numThreads) {
         this.batch = batch;
         this.read = new MyBlockingQueue<>();
         this.write = new MyBlockingQueue<>();
@@ -84,7 +84,7 @@ public class BatchProcessMultipleThread {
         String outputPath = args[1];
         int batch = Integer.parseInt(args[2]);
         int numThreads = Integer.parseInt(args[3]);
-        BatchProcessMultipleThread batchProcessMultipleThread = new BatchProcessMultipleThread(inputPath, outputPath, batch, numThreads);
-        batchProcessMultipleThread.process();
+        BatchProcessMultipleThreads batchProcessMultipleThreads = new BatchProcessMultipleThreads(inputPath, outputPath, batch, numThreads);
+        batchProcessMultipleThreads.process();
     }
 }

@@ -59,10 +59,72 @@ public class ProcessUtils {
                                                                  int batch,
                                                                  String[] results,
                                                                  MyPipeline<Annotation>[] pipelines) {
+
+        String enSentences = EnTokenize(element.get()[0], batch, results, pipelines[0]);
+        String zhSentences = ZhTokenize(element.get()[1], batch, results, pipelines[1]);
+
+        return new SentencePairs(enSentences, zhSentences);
+    }
+
+    public static QueueElement<String> EnTokenizeProcessor(QueueElement<String> element,
+                                                           int batch,
+                                                           String[] results,
+                                                           MyPipeline<Annotation>[] pipelines) {
+        String enSentences = EnTokenize(element.get()[0], batch, results, pipelines[0]);
+        return new SingleSentence(enSentences);
+    }
+
+    public static QueueElement<String> ZhTokenizeProcessor(QueueElement<String> element,
+                                                           int batch,
+                                                           String[] results,
+                                                           MyPipeline<Annotation>[] pipelines) {
+        String zhSentences = ZhTokenize(element.get()[0], batch, results, pipelines[0]);
+        return new SingleSentence(zhSentences);
+    }
+
+    public static void SingleSentenceReader(
+            MyBlockingQueue<QueueElement<String>> read,
+            int batch,
+            BufferedReader[] ins
+    ) {
+        String str;
+        int counter = 0;
+        String[] ret = new String[batch];
+        try {
+            while ((str = ins[0].readLine()) != null) {
+                counter += 1;
+                ret[counter % batch - 1 < 0 ? batch - 1 : counter % batch - 1] = str;
+                if (counter % batch == 0) {
+                    read.add(new SingleSentence(String.join("\n", ret)));
+                }
+            }
+            if (counter % batch != 0) {
+                read.add(new SingleSentence(String.join("\n", Arrays.asList(ret).subList(0, counter % batch))));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void SingleSentenceWriter(QueueElement<String> element, FileOutputStream[] outs) {
+        String[] result = element.get();
+        try {
+            outs[0].write(result[0].getBytes("UTF-8"));
+            outs[0].write("\n".getBytes("UTF-8"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private static String EnTokenize(String element,
+                                     int batch,
+                                     String[] results,
+                                     MyPipeline<Annotation> pipeline) {
         int counter = 0;
         List<String> result = new ArrayList<>();
-        Annotation enDocuments = new Annotation(element.get()[0]);
-        pipelines[0].dealWith(enDocuments);
+        Annotation enDocuments = new Annotation(element);
+        pipeline.dealWith(enDocuments);
         List<CoreMap> sentenceTmp = enDocuments.get(CoreAnnotations.SentencesAnnotation.class);
         for (CoreMap sentence : sentenceTmp) {
             counter += 1;
@@ -78,10 +140,22 @@ public class ProcessUtils {
         } else {
             enSentences = String.join("\n", Arrays.asList(results).subList(0, counter));
         }
-        Annotation zhDocuments = new Annotation(element.get()[1]);
-        pipelines[1].dealWith(zhDocuments);
-        sentenceTmp = zhDocuments.get(CoreAnnotations.SentencesAnnotation.class);
-        counter = 0;
+
+        return enSentences;
+    }
+
+
+    private static String ZhTokenize(
+            String element,
+            int batch,
+            String[] results,
+            MyPipeline<Annotation> pipeline
+    ) {
+        int counter = 0;
+        List<String> result = new ArrayList<>();
+        Annotation zhDocuments = new Annotation(element);
+        pipeline.dealWith(zhDocuments);
+        List<CoreMap> sentenceTmp = zhDocuments.get(CoreAnnotations.SentencesAnnotation.class);
         for (CoreMap sentence : sentenceTmp) {
             counter += 1;
             for (CoreLabel token : sentence.get(CoreAnnotations.TokensAnnotation.class)) {
@@ -96,8 +170,7 @@ public class ProcessUtils {
         } else {
             zhSentences = String.join("\n", Arrays.asList(results).subList(0, counter));
         }
-
-        return new SentencePairs(enSentences, zhSentences);
+        return zhSentences;
     }
 }
 
